@@ -1,0 +1,90 @@
+﻿@using PruebaAplication.Models
+@model Afiliado
+
+
+
+
+<form class="needs-validation" method="post" action="" novalidate>
+    <div class="form-row">
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Nombre</label>
+            @*@Html.EditorFor(model => model.NOMBRE, new { htmlAttributes = new { @class = "form-control" , @id = "nombre-txb"} })*@
+        
+            <input type="text" class="form-control" id="nombre-txb" placeholder="First name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom02">Apellido</label>
+            @Html.EditorFor(model => model.APELLIDO, new { htmlAttributes = new { @class = "form-control", @id = "apellido-txb" } })
+           
+           @* <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" required>*@
+            <div class="valid-feedback">
+
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustomUsername">Cedula</label>
+            <div class="input-group">
+                @Html.EditorFor(model => model.CEDULA, new { htmlAttributes = new { @class = "form-control", @id = "cedula-txb" } })
+                @*<input type="text" class="form-control" id="validationCustomUsername" placeholder="Cedula" aria-describedby="inputGroupPrepend" required>*@
+                <div class="invalid-feedback">
+                    Looks good!
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn btn-primary col-md-1 mb-5" type="submit" id="btn-buscar">Buscar</button>
+
+    </div>
+    </form>
+
+
+<table class="table table-hover table-bordered" id="tabla-consulta-masiva">
+    <tr id="tr-cabecera">
+        <th>
+            id
+        </th>
+        <th>
+            Nombre
+        </th>
+        <th>
+            Apellido
+        </th>
+        <th>
+            Cedula
+        </th>
+        <th>
+            Sexo
+        </th>
+        <th>
+            Nss
+        </th>
+        <th>
+            Fec Nac
+        </th>
+        <th>
+            FEC REG
+        </th>
+        <th>
+            Estatus
+        </th>
+        <th>
+            Monto Consumido
+        </th>
+        <th>
+            Monto Cobertura
+        </th>
+        <th>
+            Monto Restante
+        </th>
+        <th>
+            Nombre plan
+        </th>
+    </tr>    
+</table>
+
+    <script src="~/Content/js/buscar.js"></script>
+

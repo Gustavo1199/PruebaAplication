@@ -1,0 +1,94 @@
+﻿@using PruebaAplication.Models
+@model Afiliado
+
+
+
+<form class="needs-validation" novalidate>
+
+    <div class="col-md-4 mb-3">
+        <label for="validationCustom02">ID</label>
+        <input type="number" class="form-control" value="@ViewBag.id" id="tbx-id" placeholder="Last name" disabled>
+        <div class="valid-feedback">
+            Looks good!
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom01">Nombre</label>
+            @Html.EditorFor(model => model.NOMBRE, new { htmlAttributes = new { @class = "form-control", @id = "tbx-nombre" } })
+            @*<input type="text" class="form-control" id="validationCustom01" placeholder="First name" required>*@
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustom02">Apellido</label>
+            <input type="text" class="form-control" id="tbx-apellido" placeholder="Last name" required>
+            <div class="valid-feedback">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <label for="validationCustomUsername">Cedula</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="tbx-cedula" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom03">NSS</label>
+            <input type="text" class="form-control" id="tbx-NSS" placeholder="Numero de Seguridad Social" required>
+            <div class="invalid-feedback">
+                Incorrecto.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom04">Sexo</label>
+            <input type="text" class="form-control" id="tbx-SEXO" placeholder="Sexo" required>
+            <div class="invalid-feedback">
+                Incorrecto
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Fecha Nacimiento</label>
+            <input type="date" class="form-control" id="tbx-nacimiento" placeholder="Fecha Nacimiento" required>
+            <div class="invalid-feedback">
+                Incorrecto
+            </div>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationCustom03">Plan</label>
+            <input type="number" class="form-control" id="tbx-plan" placeholder="Plan Id" required>
+            <div class="invalid-feedback">
+                Incorrecto.
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom04">Estatus</label>
+            <input type="number" class="form-control" id="tbx-estatus" placeholder="Estatus Id" required>
+            <div class="invalid-feedback">
+                Incorrecto
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationCustom05">Monto Consumido</label>
+            <input type="number" class="form-control" id="tbx-monto" placeholder="Monto Consumido" required>
+            <div class="invalid-feedback">
+                Incorrecto
+            </div>
+        </div>
+
+    </div>
+    <button class="btn btn-primary" id="btn-editar" type="submit">Editar</button>
+</form>
+<script src="~/Content/js/Editar.js"></script>
+
